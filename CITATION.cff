@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+title: "Flavor Mixing Parameters from Generation Hierarchy: An Empirical Observation"
+version: 1.0.0
+date-released: 2026-01-23
+authors:
+  - family-names: "Pérez Eugenio"
+    given-names: "Erick Francisco"
+    orcid: "https://orcid.org/0009-0006-3228-4847"
+    email: "asesor.erick.perez@gmail.com"
+repository-code: "https://github.com/AsesorErick/kaelion-flavor"
+license: MIT
+keywords:
+  - flavor mixing
+  - CKM matrix
+  - PMNS matrix
+  - Weinberg angle
+  - Standard Model
+  - neutrino physics
+  - quark mixing
+abstract: >-
+  An empirical observation that flavor mixing parameters of the Standard Model
+  (CKM matrix, PMNS matrix, and Weinberg angle) can be expressed using simple
+  fractions involving only the numbers 3, 11, and 13, based on a generation
+  hierarchy rule p_i = 3^(i-1). This is a phenomenological pattern, not a
+  derivation from first principles. The predictions are falsifiable by upcoming
+  experiments (JUNO, DUNE).

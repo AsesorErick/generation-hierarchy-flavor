@@ -1,0 +1,83 @@
+{
+  "CKM_theta12": {
+    "parameter": "sin(\u03b8\u2081\u2082)_CKM",
+    "formula": "(p\u2082\u00d713 - p\u2081)/13\u00b2 = (3\u00d713 - 1)/169 = 38/169",
+    "predicted": 0.22485207100591717,
+    "observed": 0.2243,
+    "obs_error": 0.0005,
+    "deviation_percent": 0.2461306312604417,
+    "sigma": 1.1041420118343415
+  },
+  "CKM_theta23": {
+    "parameter": "sin(\u03b8\u2082\u2083)_CKM",
+    "formula": "[13 - (p\u2083-p\u2082)]/13\u00b2 = [13 - (9-3)]/169 = 7/169",
+    "predicted": 0.04142011834319527,
+    "observed": 0.0422,
+    "obs_error": 0.0008,
+    "deviation_percent": 1.8480607981154782,
+    "sigma": 0.9748520710059146
+  },
+  "CKM_theta13": {
+    "parameter": "sin(\u03b8\u2081\u2083)_CKM",
+    "formula": "(p\u2083 - p\u2081)/13\u00b3 = (9 - 1)/2197 = 8/2197",
+    "predicted": 0.0036413290851160674,
+    "observed": 0.00369,
+    "obs_error": 0.00011,
+    "deviation_percent": 1.31899498330441,
+    "sigma": 0.4424628625812066
+  },
+  "CKM_delta": {
+    "parameter": "sin(\u03b4)_CKM",
+    "formula": "(13 - p\u2082)/(13 - 2) = (13 - 3)/11 = 10/11",
+    "predicted": 0.9090909090909091,
+    "predicted_deg": 65.3800226713429,
+    "observed_deg": 65.4,
+    "obs_error_deg": 3.0,
+    "deviation_percent": 0.030546374093434074
+  },
+  "PMNS_theta12": {
+    "parameter": "sin\u00b2(\u03b8\u2081\u2082)_PMNS",
+    "formula": "(p\u2081 + p\u2082)/13 = (1 + 3)/13 = 4/13",
+    "predicted": 0.3076923076923077,
+    "observed": 0.307,
+    "obs_error": 0.013,
+    "deviation_percent": 0.22550739163117728,
+    "sigma": 0.05325443786982418
+  },
+  "PMNS_theta23": {
+    "parameter": "sin\u00b2(\u03b8\u2082\u2083)_PMNS",
+    "formula": "(p\u2083 - p\u2082)/(13 - 2) = (9 - 3)/11 = 6/11",
+    "predicted": 0.5454545454545454,
+    "observed": 0.546,
+    "obs_error": 0.021,
+    "deviation_percent": 0.09990009990011478,
+    "sigma": 0.02597402597402984
+  },
+  "PMNS_theta13": {
+    "parameter": "sin\u00b2(\u03b8\u2081\u2083)_PMNS",
+    "formula": "(13-p\u2083)(13-p\u2081)/13\u00b3 = (13-9)(13-1)/2197 = 48/2197",
+    "predicted": 0.021847974510696404,
+    "observed": 0.022,
+    "obs_error": 0.0007,
+    "deviation_percent": 0.6910249513799739,
+    "sigma": 0.21717927043370608
+  },
+  "PMNS_delta": {
+    "parameter": "sin(\u03b4)_PMNS",
+    "formula": "-(13 - p\u2082)/13 = -(13 - 3)/13 = -10/13",
+    "predicted": -0.7692307692307693,
+    "predicted_deg": -129.7151372318262,
+    "observed_deg": -130.0,
+    "obs_error_deg": 40.0,
+    "deviation_percent": 0.2191252062875457
+  },
+  "Weinberg": {
+    "parameter": "sin\u00b2(\u03b8_W)",
+    "formula": "p\u2082/13 = 3/13 = 3/13",
+    "predicted": 0.23076923076923078,
+    "observed": 0.23121,
+    "obs_error": 4e-05,
+    "deviation_percent": 0.1906358854587677,
+    "sigma": 11.01923076923042
+  }
+}
