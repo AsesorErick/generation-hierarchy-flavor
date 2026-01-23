@@ -4,6 +4,7 @@ type: software
 title: "Flavor Mixing Parameters from Generation Hierarchy: An Empirical Observation"
 version: 1.0.0
 date-released: 2026-01-23
+doi: "10.5281/zenodo.18347004"
 authors:
   - family-names: "Pérez Eugenio"
     given-names: "Erick Francisco"
