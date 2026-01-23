@@ -96,7 +96,7 @@ This hypothesis makes specific, testable predictions:
 - **Falsifiable if:** DUNE measures sin(δ) outside -0.79 to -0.75
 
 ### Pre-registration
-These predictions are pre-registered at OSF: [DOI pending]
+These predictions are pre-registered at OSF: [10.17605/OSF.IO/ZAHBN](https://doi.org/10.17605/OSF.IO/ZAHBN)
 
 ---
 
