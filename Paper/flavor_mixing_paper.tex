@@ -1,0 +1,324 @@
+\documentclass[12pt,a4paper]{article}
+
+% ============================================================
+% PACKAGES
+% ============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{authblk}
+
+\geometry{margin=2.5cm}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% ============================================================
+% DOCUMENT
+% ============================================================
+\begin{document}
+
+% ----------------------------------------------------------------------------
+% TITLE
+% ----------------------------------------------------------------------------
+
+\title{\textbf{Flavor Mixing Parameters from Generation Hierarchy}\\[0.5em]
+\large An Empirical Observation}
+
+\author[1]{Erick Francisco Perez Eugenio\thanks{Corresponding author: \href{mailto:kaelion.project@gmail.com}{kaelion.project@gmail.com}}}
+\affil[1]{Independent Researcher\\ORCID: \href{https://orcid.org/0009-0006-3228-4847}{0009-0006-3228-4847}}
+
+\date{February 2026}
+
+\maketitle
+
+% ----------------------------------------------------------------------------
+% ABSTRACT
+% ----------------------------------------------------------------------------
+
+\begin{abstract}
+We report an empirical observation: the nine flavor mixing parameters of the Standard Model (three CKM angles, three PMNS angles, two CP-violating phases, and the Weinberg angle) can all be expressed as simple rational fractions constructed from powers of~3 and the integer~13. The generation hierarchy rule $p_i = 3^{i-1}$ for generation $i = 1, 2, 3$, combined with the cluster number $13$ (the total count of gauge bosons plus one), reproduces all nine parameters with deviations below~2\% from PDG~2024 central values. We identify cross-relations between the quark and lepton sectors, including a shared CP-phase numerator and a factor-of-6 link between $\theta_{13}$ mixing angles. The hypothesis is pre-registered and falsifiable: the JUNO and DUNE experiments will provide definitive tests within this decade. We emphasize that this is a phenomenological pattern, not a derivation from first principles, and the risk of coincidental fitting cannot be excluded.
+
+\vspace{1em}
+\noindent\textbf{Keywords:} flavor mixing, CKM matrix, PMNS matrix, Weinberg angle, generation hierarchy, neutrino oscillations
+\end{abstract}
+
+% ----------------------------------------------------------------------------
+% 1. INTRODUCTION
+% ----------------------------------------------------------------------------
+
+\section{Introduction}
+
+The Standard Model of particle physics contains a set of seemingly arbitrary parameters governing the mixing between quark and lepton mass eigenstates. The Cabibbo--Kobayashi--Maskawa (CKM) matrix describes quark mixing through three angles $(\theta_{12}, \theta_{23}, \theta_{13})$ and one CP-violating phase $\delta$~\cite{pdg2024}. The Pontecorvo--Maki--Nakagawa--Sakata (PMNS) matrix parameterizes neutrino mixing with an analogous set of three angles and one Dirac phase~\cite{pmns_review}. The weak mixing angle $\theta_W$ (Weinberg angle) governs electroweak symmetry breaking. Together, these nine parameters are measured to high precision but lack a theoretical explanation for their specific values.
+
+Numerous attempts have been made to derive these parameters from symmetry principles, texture zeros, or discrete flavor symmetries (see \cite{flavor_review} for a review). In this note, we take a different and deliberately modest approach: we report an \textit{empirical observation} that all nine parameters can be expressed as simple rational fractions built from two integers, $3$ and $13$, via a generation hierarchy rule.
+
+We make no claim that this observation constitutes a theory. The formulas were identified by inspection of the data and may represent coincidence rather than structure. However, the observation is \textit{falsifiable}: upcoming neutrino experiments will either confirm or rule out the predicted values at high precision. This hypothesis has been pre-registered at the Open Science Framework~\cite{osf_prereg} prior to these experimental results.
+
+% ----------------------------------------------------------------------------
+% 2. THE GENERATION HIERARCHY RULE
+% ----------------------------------------------------------------------------
+
+\section{The Generation Hierarchy Rule}
+
+We define a generation weight for each fermion generation:
+\begin{equation}
+    p_i = 3^{i-1}, \quad i = 1, 2, 3
+    \label{eq:hierarchy}
+\end{equation}
+giving $p_1 = 1$, $p_2 = 3$, $p_3 = 9$. The base 3 corresponds to the number of fermion generations in the Standard Model.
+
+We further identify a \textit{cluster number}:
+\begin{equation}
+    N_g = 13 = 1 + 12
+    \label{eq:cluster}
+\end{equation}
+where 12 is the total number of gauge bosons in the Standard Model (8~gluons + $W^+$, $W^-$, $Z^0$, $\gamma$). A secondary number $N_g - 2 = 11$ also appears.
+
+We emphasize that the identification of $13 = 1 + 12$ is a \textit{motivation}, not a derivation. Whether the number 13 has deeper gauge-theoretic significance is an open question.
+
+% ----------------------------------------------------------------------------
+% 3. CKM PREDICTIONS
+% ----------------------------------------------------------------------------
+
+\section{CKM Matrix Predictions}
+
+Using the standard parameterization of the CKM matrix~\cite{pdg2024}, the three mixing angles and CP phase can be expressed as:
+
+\begin{align}
+    \sin\theta_{12} &= \frac{p_2 \cdot 13 - p_1}{13^2} = \frac{38}{169} \approx 0.2249 \label{eq:ckm12} \\[6pt]
+    \sin\theta_{23} &= \frac{13 - (p_3 - p_2)}{13^2} = \frac{7}{169} \approx 0.04142 \label{eq:ckm23} \\[6pt]
+    \sin\theta_{13} &= \frac{p_3 - p_1}{13^3} = \frac{8}{2197} \approx 0.003641 \label{eq:ckm13} \\[6pt]
+    \sin\delta_\text{CKM} &= \frac{13 - p_2}{13 - 2} = \frac{10}{11} \approx 0.9091 \label{eq:ckm_delta}
+\end{align}
+
+\begin{table}[H]
+\centering
+\caption{CKM matrix predictions compared with PDG 2024 values.}
+\label{tab:ckm}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Parameter} & \textbf{Formula} & \textbf{Predicted} & \textbf{PDG 2024} & \textbf{Dev.} \\
+\midrule
+$\sin\theta_{12}$ & $38/169$ & 0.2249 & $0.2243 \pm 0.0005$ & $1.1\sigma$ \\
+$\sin\theta_{23}$ & $7/169$ & 0.04142 & $0.0422 \pm 0.0008$ & $1.0\sigma$ \\
+$\sin\theta_{13}$ & $8/2197$ & 0.003641 & $0.00369 \pm 0.00011$ & $0.4\sigma$ \\
+$\delta_\text{CKM}$ & $\arcsin(10/11)$ & $65.38^\circ$ & $65.4^\circ \pm 3.0^\circ$ & $< 0.1\sigma$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All four CKM parameters fall within $1.1\sigma$ of their measured values. We note that the hierarchy of CKM elements ($\theta_{12} \gg \theta_{23} \gg \theta_{13}$) is naturally reproduced by the increasing powers of 13 in the denominators: $13^2$, $13^2$, $13^3$.
+
+% ----------------------------------------------------------------------------
+% 4. PMNS PREDICTIONS
+% ----------------------------------------------------------------------------
+
+\section{PMNS Matrix Predictions}
+
+The PMNS mixing parameters~\cite{pmns_review} are conventionally quoted as $\sin^2\theta_{ij}$ rather than $\sin\theta_{ij}$. We find:
+
+\begin{align}
+    \sin^2\theta_{12} &= \frac{p_1 + p_2}{13} = \frac{4}{13} \approx 0.3077 \label{eq:pmns12} \\[6pt]
+    \sin^2\theta_{23} &= \frac{p_3 - p_2}{13 - 2} = \frac{6}{11} \approx 0.5455 \label{eq:pmns23} \\[6pt]
+    \sin^2\theta_{13} &= \frac{(13 - p_3)(13 - p_1)}{13^3} = \frac{48}{2197} \approx 0.02185 \label{eq:pmns13} \\[6pt]
+    \sin\delta_\text{PMNS} &= -\frac{13 - p_2}{13} = -\frac{10}{13} \approx -0.7692 \label{eq:pmns_delta}
+\end{align}
+
+The physical PMNS phase corresponds to $\delta_\text{PMNS} = \pi - \arcsin(10/13) \approx -129.7^\circ$.
+
+\begin{table}[H]
+\centering
+\caption{PMNS matrix predictions compared with PDG 2024 values (normal ordering).}
+\label{tab:pmns}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Parameter} & \textbf{Formula} & \textbf{Predicted} & \textbf{PDG 2024} & \textbf{Dev.} \\
+\midrule
+$\sin^2\theta_{12}$ & $4/13$ & 0.3077 & $0.307 \pm 0.013$ & $0.05\sigma$ \\
+$\sin^2\theta_{23}$ & $6/11$ & 0.5455 & $0.546 \pm 0.021$ & $0.03\sigma$ \\
+$\sin^2\theta_{13}$ & $48/2197$ & 0.02185 & $0.0220 \pm 0.0007$ & $0.2\sigma$ \\
+$\delta_\text{PMNS}$ & $-\arcsin(10/13)$ & $-129.7^\circ$ & $-130^\circ \pm 40^\circ$ & $< 0.01\sigma$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The PMNS predictions are remarkably close to central values, though the current experimental uncertainties (particularly for $\delta_\text{PMNS}$) are large.
+
+% ----------------------------------------------------------------------------
+% 5. WEINBERG ANGLE
+% ----------------------------------------------------------------------------
+
+\section{Weinberg Angle}
+
+The weak mixing angle is:
+\begin{equation}
+    \sin^2\theta_W = \frac{p_2}{13} = \frac{3}{13} \approx 0.2308
+    \label{eq:weinberg}
+\end{equation}
+
+The measured value at the $M_Z$ scale in the $\overline{\text{MS}}$ scheme is $\sin^2\theta_W = 0.23121 \pm 0.00004$~\cite{pdg2024}. The prediction deviates by approximately $0.2\%$, corresponding to $\sim 11\sigma$.
+
+This is the only parameter showing significant tension with data. A possible interpretation is that $3/13$ represents a high-energy (``bare'') value, with the measured value receiving radiative corrections from renormalization group running. Within the Standard Model, $\sin^2\theta_W$ runs from $\sim 3/8 = 0.375$ at unification to $\sim 0.231$ at $M_Z$, so the question is whether there exists an energy scale at which $\sin^2\theta_W$ passes through $3/13$. We note that this would occur at a scale somewhat above $M_Z$, but a precise determination requires specifying the running scheme and is beyond the scope of this empirical note.
+
+% ----------------------------------------------------------------------------
+% 6. CROSS-RELATIONS
+% ----------------------------------------------------------------------------
+
+\section{Cross-Relations}
+
+Two structural relationships connect the quark and lepton sectors.
+
+\subsection{The $\theta_{13}$ Connection}
+
+The reactor and $V_{ub}$ mixing parameters satisfy:
+\begin{equation}
+    \sin^2\theta_{13}^\text{PMNS} = 6 \times \sin\theta_{13}^\text{CKM}
+    \label{eq:cross_theta13}
+\end{equation}
+since $48/13^3 = 6 \times 8/13^3$. The factor 6 = $(p_3 - p_2)(13 - p_1)/[(p_3 - p_1) \cdot 13]$ arises naturally from the generation hierarchy.
+
+\subsection{The CP Phase Structure}
+
+Both CP-violating phases share the same numerator:
+\begin{align}
+    \sin\delta_\text{CKM} &= +\frac{10}{11} = +\frac{13 - p_2}{13 - 2} \\[4pt]
+    \sin\delta_\text{PMNS} &= -\frac{10}{13} = -\frac{13 - p_2}{13}
+\end{align}
+
+The common numerator $10 = 13 - 3 = N_g - p_2$ links CP violation in both sectors. The sign difference (positive for quarks, negative for leptons) and the different denominators (11 vs.\ 13) distinguish the two sectors.
+
+% ----------------------------------------------------------------------------
+% 7. DEGREE OF FREEDOM ANALYSIS
+% ----------------------------------------------------------------------------
+
+\section{Degree of Freedom Analysis}
+
+An honest assessment of the predictive content requires counting degrees of freedom. The model has:
+
+\textbf{Inputs:} Two integers, $3$ (generation base) and $13$ (cluster number). Additionally, the \textit{form} of each formula (which combinations of $p_i$, $13$, and $11$ appear in numerator and denominator) constitutes implicit degrees of freedom.
+
+\textbf{Outputs:} Nine parameters (four CKM, four PMNS, one Weinberg).
+
+If each formula form is considered a free choice, the model has effectively $9$ implicit structural choices constrained to hit $9$ targets, which would make the agreement unremarkable. The non-trivial content lies in:
+\begin{enumerate}[nosep]
+    \item All formulas use only $\{p_1, p_2, p_3, 13, 11\}$ with simple arithmetic.
+    \item The cross-relations (Section~6) are not independent fits but structural consequences.
+    \item The hierarchy $13^2$ vs.\ $13^3$ in denominators naturally reproduces the CKM hierarchy.
+    \item The Weinberg angle prediction was not fitted to data (it disagrees at $11\sigma$).
+\end{enumerate}
+
+We leave it to the reader to judge whether the pattern is sufficiently constrained to be non-trivial.
+
+% ----------------------------------------------------------------------------
+% 8. FALSIFIABILITY
+% ----------------------------------------------------------------------------
+
+\section{Experimental Tests}
+
+The hypothesis makes specific predictions testable by upcoming experiments:
+
+\subsection{JUNO (~2027)}
+
+The Jiangmen Underground Neutrino Observatory~\cite{juno} will measure $\sin^2\theta_{12}$ with precision $\sim \pm 0.003$. Our prediction:
+\begin{equation}
+    \sin^2\theta_{12} = \frac{4}{13} = 0.30769\ldots
+\end{equation}
+\textbf{Falsified if:} JUNO measures $\sin^2\theta_{12}$ outside $[0.298,\, 0.317]$ at $3\sigma$.
+
+\subsection{DUNE (~2029+)}
+
+The Deep Underground Neutrino Experiment~\cite{dune} will measure $\delta_\text{PMNS}$ with precision $\sim \pm 10^\circ$. Our prediction:
+\begin{equation}
+    \delta_\text{PMNS} = -129.7^\circ \quad (\sin\delta = -10/13)
+\end{equation}
+\textbf{Falsified if:} DUNE measures $\delta_\text{PMNS}$ outside $[-160^\circ,\, -100^\circ]$ at $3\sigma$.
+
+\subsection{Hyper-Kamiokande}
+
+Hyper-Kamiokande~\cite{hyperk} will provide complementary measurements of $\sin^2\theta_{23}$ with precision $\sim \pm 0.006$. Our prediction:
+\begin{equation}
+    \sin^2\theta_{23} = \frac{6}{11} = 0.54545\ldots
+\end{equation}
+\textbf{Falsified if:} Hyper-K measures $\sin^2\theta_{23}$ outside $[0.527,\, 0.564]$ at $3\sigma$.
+
+\vspace{0.5em}
+These predictions have been pre-registered at the Open Science Framework~\cite{osf_prereg} to ensure that they are genuine \textit{a priori} predictions for these specific experiments, even though the formulas were constructed using existing data.
+
+% ----------------------------------------------------------------------------
+% 9. DISCUSSION
+% ----------------------------------------------------------------------------
+
+\section{Discussion}
+
+We have presented an empirical pattern, not a theory. Several important caveats must be stated clearly:
+
+\textbf{Post-hoc construction.} The formulas were found by inspecting the experimental values and identifying rational approximations using the numbers $\{1, 3, 9, 11, 13\}$. This is fundamentally different from a first-principles derivation. The ``predictions'' for parameters already measured are retrodictions.
+
+\textbf{Risk of overfitting.} With five building blocks ($p_1, p_2, p_3, 13, 11$) and freedom to choose addition, subtraction, multiplication, division, and power operations, the space of achievable fractions is large. A systematic study of how many random numbers could be similarly approximated would strengthen or weaken the case, but is beyond our current scope.
+
+\textbf{Weinberg angle tension.} The $11\sigma$ discrepancy for $\sin^2\theta_W$ is either evidence against the pattern or evidence that $3/13$ is a high-energy value. We cannot distinguish these possibilities without a theoretical framework.
+
+\textbf{No mechanism.} We offer no explanation for \textit{why} these patterns should hold. Without a mechanism, the observation remains a curiosity rather than physics.
+
+Despite these caveats, we note that the pattern has a genuine falsifiable component: the PMNS predictions for $\sin^2\theta_{12}$, $\sin^2\theta_{23}$, and $\delta_\text{PMNS}$ will be tested at precisions that can definitively confirm or exclude the predicted values within this decade.
+
+% ----------------------------------------------------------------------------
+% 10. CONCLUSION
+% ----------------------------------------------------------------------------
+
+\section{Conclusion}
+
+We have reported the observation that all nine Standard Model flavor mixing parameters can be expressed as simple rational fractions of the form $f(1, 3, 9) / g(13, 11)$, with deviations below 2\% from PDG~2024 values in eight of nine cases. Cross-relations between the quark and lepton sectors emerge naturally from the structure.
+
+The observation is pre-registered and falsifiable. If confirmed by JUNO, DUNE, and Hyper-Kamiokande, it would suggest that the flavor sector has a simpler arithmetic structure than currently appreciated, and would call for a theoretical explanation. If falsified, it should be discarded as a numerical coincidence.
+
+All code and data are publicly available~\cite{zenodo_flavor}.
+
+% ----------------------------------------------------------------------------
+% REFERENCES
+% ----------------------------------------------------------------------------
+
+\begin{thebibliography}{99}
+
+\bibitem{pdg2024}
+R.~L. Workman \textit{et al.} (Particle Data Group), ``Review of Particle Physics,'' Prog. Theor. Exp. Phys. \textbf{2022}, 083C01 (2022), updated 2024.
+
+\bibitem{pmns_review}
+I.~Esteban \textit{et al.}, ``The fate of hints: updated global analysis of three-flavor neutrino oscillations,'' JHEP \textbf{09}, 178 (2020). See also NuFIT 5.3 (2024), \url{http://www.nu-fit.org/}.
+
+\bibitem{flavor_review}
+S.~F. King, ``Models of Neutrino Mass, Mixing and CP Violation,'' J. Phys. G \textbf{42}, 123001 (2015).
+
+\bibitem{juno}
+F.~An \textit{et al.} (JUNO Collaboration), ``Neutrino Physics with JUNO,'' J. Phys. G \textbf{43}, 030401 (2016).
+
+\bibitem{dune}
+B.~Abi \textit{et al.} (DUNE Collaboration), ``Deep Underground Neutrino Experiment (DUNE), Far Detector Technical Design Report, Volume II,'' JINST \textbf{15}, T08010 (2020).
+
+\bibitem{hyperk}
+K.~Abe \textit{et al.} (Hyper-Kamiokande Collaboration), ``Hyper-Kamiokande Design Report,'' arXiv:1805.04163 (2018).
+
+\bibitem{osf_prereg}
+E.~F. Perez Eugenio, ``Pre-registration: Flavor Mixing Parameters from Generation Hierarchy,'' Open Science Framework (2026). DOI: \href{https://doi.org/10.17605/OSF.IO/ZAHBN}{10.17605/OSF.IO/ZAHBN}.
+
+\bibitem{zenodo_flavor}
+E.~F. Perez Eugenio, ``Flavor Mixing Parameters from Generation Hierarchy: An Empirical Observation,'' Zenodo (2026). DOI: \href{https://doi.org/10.5281/zenodo.18347004}{10.5281/zenodo.18347004}.
+
+\end{thebibliography}
+
+\end{document}
